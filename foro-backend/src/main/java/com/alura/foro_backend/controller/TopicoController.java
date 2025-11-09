@@ -109,18 +109,6 @@ public class TopicoController {
     }
 
     /**
-     * Obtiene todos los tópicos sin paginación.
-     *
-     * @return lista de todos los tópicos
-     */
-    @GetMapping("/todos")
-    public ResponseEntity<List<TopicoResponseDTO>> obtenerTodosLosTopicos() {
-        log.info("Obteniendo todos los tópicos sin paginación");
-        List<TopicoResponseDTO> topicos = topicoService.obtenerTodosLosTopicos();
-        return ResponseEntity.ok(topicos);
-    }
-
-    /**
      * Actualiza un tópico existente.
      *
      * @param id ID del tópico a actualizar
